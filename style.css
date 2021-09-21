@@ -1,50 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="sidebar">
-         <div style="background: linear-gradient(229.99deg, #11DEE9 -26%, #017EBB 145%);">
-           <h1>Show in the desert</h1>
-           <p>Love, death & robots</p>
-         </div>
-         <div style="background: linear-gradient(215.32deg, #f90306 -1%, #9e0706 124%);">
-           <h1>Life Hutch</h1>
-           <p>Love, death & robots</p>
-         </div>
-         <div style="background: linear-gradient(221.87deg, #830bea -1%, purple 128%);">
-           <h1>Zima Blue</h1>
-           <p>Love, death & robots</p>
-         </div>
-         <div style="background: linear-gradient(229.99deg, #ffe101 -8%, #f39102 138%);">
-           <h1>Automated Customer Service</h1>
-           <p>Love, death & robots</p>
-         </div>
-    </div>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <div class="main-slide">
-      <div style="background-image: url('joseph-barrientos.jpg')"></div>
-      <div style="background-image: url('switzerland-in-pictures-most-beautiful-places-matterhorn.jpg')"></div>
-      <div style="background-image: url('jump.jpg')"></div>
-      <div style="background-image: url('waterfall.jpg')"></div>
-    </div>
-    <div class="controls">
-      <button class="down-button">
-        Down
-      </button>
+body {
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
 
-      <button class="up-button">
-        Up
-      </button>
-    </div>
-  </div>
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
 
-  <script src="app.js"></script>
-</body>
-</html>
+.sidebar {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transorm .5s ease-in-out;
+}
+
+
+.sidebar > div {
+  height: 100%;
+  width:  100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.sidebar h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+.main-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transorm 0.5s ease-in-out
+}
+
+
+.main-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+    button {
+  background-color: #fff;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+}
+
+button:hover {
+  color: #222;
+}
+
+button:focus {
+  outline: none;
+}
+
+.container .controls button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+
+.container .controls .down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px ;
+  border-bottom-left-radius: 5px;
+}
+
+.container .controls .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px ;
+  border-bottom-right-radius: 5px;
+}
