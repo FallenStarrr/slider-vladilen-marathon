@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+         <div style="background: linear-gradient(229.99deg, #11DEE9 -26%, #017EBB 145%);">
+           <h1>Show in the desert</h1>
+           <p>Love, death & robots</p>
+         </div>
+         <div style="background: linear-gradient(215.32deg, #f90306 -1%, #9e0706 124%);">
+           <h1>Life Hutch</h1>
+           <p>Love, death & robots</p>
+         </div>
+         <div style="background: linear-gradient(221.87deg, #830bea -1%, purple 128%);">
+           <h1>Zima Blue</h1>
+           <p>Love, death & robots</p>
+         </div>
+         <div style="background: linear-gradient(229.99deg, #ffe101 -8%, #f39102 138%);">
+           <h1>Automated Customer Service</h1>
+           <p>Love, death & robots</p>
+         </div>
+    </div>
+
+    <div class="main-slide">
+      <div style="background-image: url('joseph-barrientos.jpg')"></div>
+      <div style="background-image: url('switzerland-in-pictures-most-beautiful-places-matterhorn.jpg')"></div>
+      <div style="background-image: url('jump.jpg')"></div>
+      <div style="background-image: url('waterfall.jpg')"></div>
+    </div>
+    <div class="controls">
+      <button class="down-button">
+        Down
+      </button>
+
+      <button class="up-button">
+        Up
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
